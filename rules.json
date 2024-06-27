@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "X-Network-Request-Detected",
+          "operation": "set",
+          "value": "commercial"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://*.googlevideo.com/*",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "X-Network-Request-Detected",
+          "operation": "set",
+          "value": "game"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://playback-heartbeat.mlb.com/*",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "X-Network-Request-Detected",
+          "operation": "set",
+          "value": "game"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://statsapi.mlb.com/api/*/live*",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  }
+]
